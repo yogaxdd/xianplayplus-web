@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XianPlay+ | Premium Chinese Drama Streaming</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0B0B0D',
+                        primary: '#C9A24D',
+                        secondary: '#3FAF8F',
+                        textMain: '#FFFFFF',
+                        textMuted: '#B3B3B3',
+                        surface: '#1A1A1C',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        cinematic: ['Cinzel', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1.5s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0B0B0D;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(to right, #C9A24D, #E5C579, #C9A24D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+        }
+
+        .cinematic-glow {
+            box-shadow: 0 0 40px rgba(201, 162, 77, 0.15);
+        }
+
+        .jade-glow {
+            box-shadow: 0 0 30px rgba(63, 175, 143, 0.2);
+        }
+
+        .glass-panel {
+            background: rgba(26, 26, 28, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* Minimal scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0B0B0D;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1A1A1C;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C9A24D;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-primary selection:text-black">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed w-full z-50 top-0 transition-all duration-300 py-6 px-6 md:px-12 glass-panel border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="assets/logo.png" alt="XianPlay+" class="w-10 h-10 object-contain">
+                <span class="font-cinematic text-xl tracking-wider text-primary font-bold">XianPlay+</span>
+            </div>
+            <a href="#download"
+                class="hidden md:block px-6 py-2 border border-primary text-primary rounded-sm hover:bg-primary hover:text-background transition-all duration-300 font-medium tracking-wide text-sm">
+                GET THE APP
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[128px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-[128px]"></div>
+            <!-- Dust particles overlay could go here -->
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <div class="mb-8 opacity-0 animate-fade-in flex justify-center">
+                <img src="assets/logo.png" alt="Logo" class="w-32 h-32 md:w-40 md:h-40 object-contain animate-float">
+            </div>
+
+            <h1
+                class="font-heading text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight leading-tight opacity-0 animate-[fadeIn_1.5s_ease-out_0.3s_forwards]">
+                <span class="block text-white mb-2">Cinematic Drama.</span>
+                <span class="gold-gradient-text italic">Without Limits.</span>
+            </h1>
+
+            <p
+                class="text-textMuted text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light tracking-wide leading-relaxed opacity-0 animate-[fadeIn_1.5s_ease-out_0.6s_forwards]">
+                Experience the finest collection of Chinese dramas in a premium, immersive environment designed for true
+                enthusiasts.
+            </p>
+
+            <div
+                class="flex flex-col md:flex-row gap-6 justify-center items-center opacity-0 animate-[fadeIn_1.5s_ease-out_0.9s_forwards]">
+                <a href="xianplayplus-1.0.apk"
+                    class="group relative px-8 py-4 bg-primary text-background font-bold tracking-wider rounded-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,162,77,0.4)] md:w-auto w-full max-w-xs">
+                    <div
+                        class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    </div>
+                    <span class="relative flex items-center justify-center gap-3">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                        </svg>
+                        DOWNLOAD APK
+                    </span>
+                </a>
+            </div>
+
+            <div class="mt-16 animate-bounce text-textMuted/30">
+                <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-24 px-6 relative bg-[#0F0F11]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-secondary text-sm tracking-[0.2em] uppercase mb-4 block">Premium Features</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Designed for Immersion</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-panel p-8 rounded-lg hover:border-primary/30 transition-colors duration-300 group">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl mb-4 text-white">Smart Search</h3>
+                    <p class="text-textMuted leading-relaxed">Lightning fast live search with instant grid results. Find
+                        your favorite drama in milliseconds.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-panel p-8 rounded-lg hover:border-secondary/30 transition-colors duration-300 group">
+                    <div
+                        class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6 text-secondary group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl mb-4 text-white">Cinema Player</h3>
+                    <p class="text-textMuted leading-relaxed">Multi-quality support, portrait mode optimization for
+                        short dramas, and immersive fullscreen playback.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-panel p-8 rounded-lg hover:border-primary/30 transition-colors duration-300 group">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl mb-4 text-white">Offline Mode</h3>
+                    <p class="text-textMuted leading-relaxed">Download episodes with one tap. Watch anywhere without
+                        internet connection. Resume anytime.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="glass-panel p-8 rounded-lg hover:border-secondary/30 transition-colors duration-300 group">
+                    <div
+                        class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6 text-secondary group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl mb-4 text-white">Personal Library</h3>
+                    <p class="text-textMuted leading-relaxed">Bookmark your favorites. Keep track of what you're
+                        watching with persistent storage.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="glass-panel p-8 rounded-lg hover:border-primary/30 transition-colors duration-300 group">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl mb-4 text-white">Ranking System</h3>
+                    <p class="text-textMuted leading-relaxed">Discover what's trending with our real-time ranking system
+                        and personalized recommendations.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="glass-panel p-8 rounded-lg hover:border-secondary/30 transition-colors duration-300 group">
+                    <div
+                        class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6 text-secondary group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl mb-4 text-white">Intuitive Interface</h3>
+                    <p class="text-textMuted leading-relaxed">Clean, uncluttered, and premium UI. Focus on the content
+                        with our cinematic dark mode.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why XianPlay Section -->
+    <section class="py-24 px-6 border-y border-white/5 bg-surface text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-heading text-3xl md:text-5xl font-bold mb-12">The Definitive Experience</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12 text-left">
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Curated Collection</h4>
+                        <p class="text-textMuted">Hand-picked selection of high-quality dramas.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Ad-Free Experience</h4>
+                        <p class="text-textMuted">Enjoy uninterrupted streaming without distractions.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 w-2 h-2 rounded-full bg-secondary flex-shrink-0"></div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Optimized Performance</h4>
+                        <p class="text-textMuted">Built with Flutter for smooth 60fps performance.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 w-2 h-2 rounded-full bg-secondary flex-shrink-0"></div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-white">Regular Updates</h4>
+                        <p class="text-textMuted">New episodes added daily. Never miss a moment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-32 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <div
+                class="mb-10 mx-auto w-20 h-20 rounded-2xl bg-gradient-to-br from-surface to-black border border-white/10 flex items-center justify-center">
+                <img src="assets/logo.png" alt="Icon" class="w-12 h-12 object-contain">
+            </div>
+
+            <h2 class="font-heading text-5xl md:text-6xl font-bold mb-6 text-white">Start Watching Today</h2>
+            <p class="text-xl text-textMuted mb-12 max-w-2xl mx-auto">Download XianPlay+ now and step into a world of
+                compelling stories, breathtaking visuals, and endless entertainment.</p>
+
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="xianplayplus-1.0.apk"
+                    class="px-10 py-5 bg-primary text-background text-lg font-bold tracking-wider rounded-sm hover:shadow-[0_0_40px_rgba(201,162,77,0.5)] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                    </svg>
+                    DOWNLOAD APK (v1.0)
+                </a>
+            </div>
+            <p class="mt-6 text-sm text-textMuted/50">Requires Android 8.0 or later • Free • Safe & Secure</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5 bg-[#050506]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <img src="assets/logo.png" alt="Logo"
+                    class="w-8 h-8 opacity-70 grayscale hover:grayscale-0 transition-all">
+                <span class="font-cinematic text-lg text-white/50">XIANPLAY+</span>
+            </div>
+
+            <div class="flex gap-8 text-sm text-textMuted/70">
+                <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                <a href="https://instagram.com/yogakokxd"
+                    class="hover:text-primary transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                    </svg>
+                    @yogakokxd
+                </a>
+            </div>
+
+            <div class="text-xs text-textMuted/30">
+                &copy; 2026 XianPlay+. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
